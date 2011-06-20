@@ -28,38 +28,37 @@ public class Test {
         rf.setSubTitle("Apenas um teste qualquer de relatorio");
         rf.setGrandTotalTitle("Totais");
 
-        rf.generateReport(TestRepositoryProducts.getDummyCollection(), Product.class);
+//        rf.generateReport(TestRepositoryProducts.getDummyCollection(), Product.class);
 
-//        List<String> fields = new ArrayList<String>();
-//        fields.add("state");
-//        fields.add("productLine");
-//        fields.add("quantity");
-//        fields.add("id"); /* adicionando um campo que não estava originalmente configurado */
+        List<String> fields = new ArrayList<String>();
+        fields.add("state");
+        fields.add("productLine");
+        fields.add("quantity");
+        fields.add("id"); /* adicionando um campo que não estava originalmente configurado */
 
-//        HashMap<String,Boolean> customCfg = new HashMap<String, Boolean>();
-//        customCfg.put("groupingCriteria", Boolean.FALSE);
-//
-//        HashMap<String,Boolean> customCfg2 = new HashMap<String, Boolean>();
-//        customCfg2.put("sumable", Boolean.FALSE);
-//
-//        HashMap<String,Boolean> customCfg3 = new HashMap<String, Boolean>();
-//        customCfg3.put("groupingCriteria", Boolean.FALSE);
+        HashMap<String,Boolean> customCfg = new HashMap<String, Boolean>();
+        customCfg.put("groupingCriteria", Boolean.FALSE);
+
+        HashMap<String,Boolean> customCfg2 = new HashMap<String, Boolean>();
+        customCfg2.put("sumable", Boolean.FALSE);
+
+        HashMap<String,Boolean> customCfg3 = new HashMap<String, Boolean>();
+        customCfg3.put("groupingCriteria", Boolean.FALSE);
 
         /* adicionando um campo que não estava originalmente configurado */
-//        HashMap<String,String> customCfg4 = new HashMap<String, String>();
-//        customCfg4.put("property", "id");
-//        customCfg4.put("className", Long.class.getName());
-//        customCfg4.put("title", "ID");
+        HashMap<String,String> customMapping = new HashMap<String, String>();
+        customMapping.put("property", "id");
+        customMapping.put("className", Long.class.getName());
+        customMapping.put("title", "ID");
 
-
-//        HashMap<String, HashMap> customCfgv = new HashMap<String, HashMap>();
-//        customCfgv.put("productLine", customCfg);
-//        customCfgv.put("quantity", customCfg2);
-//        customCfgv.put("state", customCfg3);
-//        customCfgv.put("id", customCfg4);/* adicionando um campo que não estava originalmente configurado */
+        HashMap<String, HashMap> customFieldsConfs = new HashMap<String, HashMap>();
+        customFieldsConfs.put("productLine", customCfg);
+        customFieldsConfs.put("quantity", customCfg2);
+        customFieldsConfs.put("state", customCfg3);
+        customFieldsConfs.put("id", customMapping);/* adicionando um campo que não estava originalmente configurado */
 
 //        rf.generateReport(TestRepositoryProducts.getDummyCollection(), fields, Product.class);
-//        rf.generateReport(TestRepositoryProducts.getDummyCollection(), fields, customCfgv, Product.class);
+        rf.generateReport(TestRepositoryProducts.getDummyCollection(), fields, customFieldsConfs, Product.class);
     }
 
 }

@@ -19,18 +19,6 @@
 			<bottomPen lineWidth="1.0" lineStyle="Solid"/>
 		</box>
 	</style>
-	<style name="headerVariables" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Right" vAlign="Top" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="14" isBold="true" isItalic="false" isUnderline="false" isPdfEmbedded="false">
-		<pen lineWidth="0.0" lineStyle="Solid"/>
-		<box padding="2">
-			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-		</box>
-	</style>
-	<style name="Verdana_for_group_1_" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Verdana" fontSize="18" isBold="true" isItalic="false" isUnderline="false" isPdfEmbedded="false">
-		<pen lineWidth="0.0" lineStyle="Solid"/>
-		<box padding="2">
-			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-		</box>
-	</style>
 	<style name="detail" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded="false">
 		<pen lineWidth="0.0" lineStyle="Solid"/>
 		<box padding="2">
@@ -57,6 +45,16 @@
 			<style mode="Opaque" backcolor="#C0C0C0"/>
 		</conditionalStyle>
 	</style>
+	<style name="Arial_for_column_COLUMN_2_" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded="false">
+		<pen lineWidth="0.0" lineStyle="Solid"/>
+		<box padding="2">
+			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new java.lang.Boolean(((Number)$V{REPORT_COUNT}).doubleValue() % 2 == 0)]]></conditionExpression>
+			<style mode="Opaque" backcolor="#C0C0C0"/>
+		</conditionalStyle>
+	</style>
 	<style name="Arial_for_column_COLUMN_3_" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded="false">
 		<pen lineWidth="0.0" lineStyle="Solid"/>
 		<box padding="2">
@@ -67,104 +65,10 @@
 			<style mode="Opaque" backcolor="#C0C0C0"/>
 		</conditionalStyle>
 	</style>
-	<style name="Arial_for_column_COLUMN_4_" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded="false">
-		<pen lineWidth="0.0" lineStyle="Solid"/>
-		<box padding="2">
-			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-		</box>
-		<conditionalStyle>
-			<conditionExpression><![CDATA[new java.lang.Boolean(((Number)$V{REPORT_COUNT}).doubleValue() % 2 == 0)]]></conditionExpression>
-			<style mode="Opaque" backcolor="#C0C0C0"/>
-		</conditionalStyle>
-	</style>
-	<style name="Arial_for_column_COLUMN_5_" mode="Transparent" forecolor="#000000" backcolor="#FFFFFF" fill="Solid" radius="0" scaleImage="Clip" hAlign="Left" vAlign="Bottom" rotation="None" isBlankWhenNull="true" fontName="Arial" fontSize="10" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded="false">
-		<pen lineWidth="0.0" lineStyle="Solid"/>
-		<box padding="2">
-			<pen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-		</box>
-		<conditionalStyle>
-			<conditionExpression><![CDATA[new java.lang.Boolean(((Number)$V{REPORT_COUNT}).doubleValue() % 2 == 0)]]></conditionExpression>
-			<style mode="Opaque" backcolor="#C0C0C0"/>
-		</conditionalStyle>
-	</style>
+	<field name="id" class="java.lang.Long"/>
 	<field name="productLine" class="java.lang.String"/>
-	<field name="item" class="java.lang.String"/>
 	<field name="state" class="java.lang.String"/>
-	<field name="branch" class="java.lang.String"/>
 	<field name="quantity" class="java.lang.Long"/>
-	<field name="amount" class="java.lang.Float"/>
-	<variable name="variable-header_global_quantity" class="java.lang.Long" resetType="Group" resetGroup="global_column_0" calculation="Sum">
-		<variableExpression><![CDATA[$F{quantity}]]></variableExpression>
-		<initialValueExpression><![CDATA[new java.lang.Long("0")]]></initialValueExpression>
-	</variable>
-	<variable name="variable-header_global_amount" class="java.lang.Float" resetType="Group" resetGroup="global_column_0" calculation="Sum">
-		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
-		<initialValueExpression><![CDATA[new java.lang.Float("0")]]></initialValueExpression>
-	</variable>
-	<variable name="variable-footer_global_quantity" class="java.lang.Long" resetType="Group" resetGroup="global_column_0" calculation="Sum">
-		<variableExpression><![CDATA[$F{quantity}]]></variableExpression>
-		<initialValueExpression><![CDATA[new java.lang.Long("0")]]></initialValueExpression>
-	</variable>
-	<variable name="variable-footer_global_amount" class="java.lang.Float" resetType="Group" resetGroup="global_column_0" calculation="Sum">
-		<variableExpression><![CDATA[$F{amount}]]></variableExpression>
-		<initialValueExpression><![CDATA[new java.lang.Float("0")]]></initialValueExpression>
-	</variable>
-	<group name="global_column_0">
-		<groupExpression><![CDATA["Totais"]]></groupExpression>
-		<groupHeader>
-			<band height="32" splitType="Stretch">
-				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="global_column_0">
-					<reportElement key="variable_for_column_3_in_group_0" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="333" y="0" width="111" height="30"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.Long"><![CDATA[$V{variable-header_global_quantity}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="global_column_0">
-					<reportElement key="variable_for_column_4_in_group_0" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="444" y="0" width="111" height="30"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.Float"><![CDATA[$V{variable-header_global_amount}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement key="global_legend_header" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="333" height="32"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.String"><![CDATA["Totais"]]></textFieldExpression>
-				</textField>
-			</band>
-		</groupHeader>
-		<groupFooter>
-			<band height="32" splitType="Stretch">
-				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="global_column_0">
-					<reportElement key="variable_for_column_3_in_group_0" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="333" y="0" width="111" height="30"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.Long"><![CDATA[$V{variable-footer_global_quantity}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="global_column_0">
-					<reportElement key="variable_for_column_4_in_group_0" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="444" y="0" width="111" height="30"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.Float"><![CDATA[$V{variable-footer_global_amount}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement key="global_legend_footer" style="headerVariables" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="333" height="32"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.String"><![CDATA["Totais"]]></textFieldExpression>
-				</textField>
-			</band>
-		</groupFooter>
-	</group>
-	<group name="group[1]_for_column_2-COLUMN_2">
-		<groupExpression><![CDATA[$F{state}]]></groupExpression>
-		<groupHeader>
-			<band height="35" splitType="Stretch">
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement style="Verdana_for_group_1_" stretchType="RelativeToTallestObject" x="0" y="0" width="555" height="35" isPrintWhenDetailOverflows="true" printWhenGroupChanges="group[1]_for_column_2-COLUMN_2"/>
-					<textElement/>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{state}]]></textFieldExpression>
-				</textField>
-			</band>
-		</groupHeader>
-		<groupFooter>
-			<band splitType="Stretch"/>
-		</groupFooter>
-	</group>
 	<pageHeader>
 		<band height="45">
 			<textField isStretchWithOverflow="true">
@@ -186,58 +90,48 @@
 	<columnHeader>
 		<band height="30">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="header_Linha do Produto" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="111" height="30" isPrintWhenDetailOverflows="true"/>
+				<reportElement key="header_ID" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="138" height="30" isPrintWhenDetailOverflows="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA["ID"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="header_Linha do Produto" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="138" y="0" width="138" height="30" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA["Linha do Produto"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="header_Item" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="111" y="0" width="111" height="30" isPrintWhenDetailOverflows="true"/>
+				<reportElement key="header_Estado" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="276" y="0" width="138" height="30" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA["Item"]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA["Estado"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="header_Lugar" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="222" y="0" width="111" height="30" isPrintWhenDetailOverflows="true"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA["Lugar"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="header_Quantidade" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="333" y="0" width="111" height="30" isPrintWhenDetailOverflows="true"/>
+				<reportElement key="header_Quantidade" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="414" y="0" width="141" height="30" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA["Quantidade"]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement key="header_Valor" style="header" positionType="Float" stretchType="RelativeToTallestObject" x="444" y="0" width="111" height="30" isPrintWhenDetailOverflows="true"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA["Valor"]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="15" splitType="Stretch">
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Arial_for_column_COLUMN_0_" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="111" height="15" isPrintWhenDetailOverflows="true"/>
+				<reportElement style="Arial_for_column_COLUMN_0_" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="138" height="15" isPrintWhenDetailOverflows="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Long"><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="Arial_for_column_COLUMN_1_" positionType="Float" stretchType="RelativeToTallestObject" x="138" y="0" width="138" height="15" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{productLine}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Arial_for_column_COLUMN_1_" positionType="Float" stretchType="RelativeToTallestObject" x="111" y="0" width="111" height="15" isPrintWhenDetailOverflows="true"/>
+				<reportElement style="Arial_for_column_COLUMN_2_" positionType="Float" stretchType="RelativeToTallestObject" x="276" y="0" width="138" height="15" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{item}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{state}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Arial_for_column_COLUMN_3_" positionType="Float" stretchType="RelativeToTallestObject" x="222" y="0" width="111" height="15" isPrintWhenDetailOverflows="true"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{branch}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Arial_for_column_COLUMN_4_" positionType="Float" stretchType="RelativeToTallestObject" x="333" y="0" width="111" height="15" isPrintWhenDetailOverflows="true"/>
+				<reportElement style="Arial_for_column_COLUMN_3_" positionType="Float" stretchType="RelativeToTallestObject" x="414" y="0" width="141" height="15" isPrintWhenDetailOverflows="true"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.Long"><![CDATA[$F{quantity}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-				<reportElement style="Arial_for_column_COLUMN_5_" positionType="Float" stretchType="RelativeToTallestObject" x="444" y="0" width="111" height="15" isPrintWhenDetailOverflows="true"/>
-				<textElement/>
-				<textFieldExpression class="java.lang.Float"><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
