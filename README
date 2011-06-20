@@ -1,0 +1,23 @@
+###PORTUGUÊS###
+Este projeto está distribuído sobre a licença MIT/GPL
+
+O código está organizado como um projeto do netbeans, mas pode ser portado para seu editor de escolha.
+
+Na pasta dist/ você encontrará o .jar do projeto já compilado e pronto para acoplar ao seu projeto princiapl.
+
+Na pasta dist/libs/ encontrará os .jar necessários para rodar o projeto.
+
+Na pasta src/ estão os códigos fonte do projeto.
+
+
+###ENGLISH###
+This project is distributed under the MIT/GPL license
+
+The code is organized as a netbeans project, but ou can port it to your favorite editor.
+
+Under the dist/ folder you'll find the .jar that contains the compiled code of the project ready to attach to your main project.
+
+Under the dist/libs/ folder you'll find the necessary .jar to run the project.
+
+Under the src/ folder you'll find the source code of the project.
+ 
